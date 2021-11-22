@@ -25,7 +25,7 @@
         <div x-data="{dropdownMenu: false}" class="relative">
             <!-- Dropdown toggle button -->
             <button @click="dropdownMenu = ! dropdownMenu">
-                <img src="/static/img/profile.jpg" @keydown.escape="isOpen = false" class="w-10 h-10 rounded-full"
+                <img src="/static/img/user.png" @keydown.escape="isOpen = false" class="w-10 h-10 rounded-full"
                     alt="">
             </button>
             <!-- Dropdown list -->
@@ -51,7 +51,7 @@
             <div class="add w-full flex justify-center flex flex-col">
                 {% for i in range(num_people) %}
                 <button class="rounded-md p-4 shadow mx-2 flex justify-between items-center mt-4 focus:bg-gray-200">
-                    <img src="/static/img/profile.jpg" class="w-10 h-10 rounded-full" alt="">
+                    <img src="/static/img/user.png" class="w-10 h-10 rounded-full" alt="">
                     <p class="overflow-ellipsis">{{ name_passenger }}</p>
                 </button>
                 {% endfor %}
