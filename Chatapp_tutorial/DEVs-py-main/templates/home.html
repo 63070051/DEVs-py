@@ -27,6 +27,11 @@
         color: #555;
         margin-bottom: 5px;
         }
+        section{
+            position: relative;
+            top: 12%;
+            padding: 8px;
+        }
     </style>
 
 <body class="h-screen w-screen vhs-fade vhs-duration-6" style="background-color: rgb(240, 240, 240);">
@@ -150,23 +155,12 @@
         </section>
     </section>
     <!-- chat -->
-    <!-- <section class="text-center">
-        <ul id="messages"></ul>
-
-        <form action="" id="form">
-            <h2 >Penguin Coders Chat</h2>
-            <textarea style="width: 100%; max-width:400px; padding: 15px;margin: auto;border-radius: 5px;"
-            id="chat" col="80" rows="10" placeholder="No message Yet!"></textarea><br>
-            <input type="text" id="input" autocomplete="off" placeholder="Write some message!">
-            <button>Send</button>
-        </form>
-    </section> -->
     
     <section>
         <div class="container">
             <div class="col-sm-8">
               <div class="no_message">
-                <h1 style='color: #ccc'>No message yet..</h1>
+                <h1 style='color: #ccc;position: relative;top:7%;'>No message yet..</h1>
                 <div class="message_holder"></div>
               </div>
             </div>
@@ -210,9 +204,10 @@
         console.log( msg )
         if( typeof msg.user_name !== 'undefined' ) {
           $( 'h1' ).remove()
-          $( 'div.message_holder' ).append( '<div class="msg_bbl"><b style="color: #000">'+msg.user_name+'</b> '+msg.message+'</div>' )
+          $( 'div.message_holder' ).append( '<div class="msg_bbl"><b style="color: #000">'+msg.user_name+ ' : ' +'</b>'+msg.message+'</div>' )
         }
       })
+
         let myID = () => {
             my_id = "63070121"
             Swal.fire({
